@@ -36,9 +36,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: SCP Transfer Files
-        uses: your-username/scp-transfer-action@v1.0.0
+        uses: reene444/scp-transfer-action@v1.0.0
         with:
           remote-user: "ubuntu"
-          remote-host: "example.com"
+          remote-host: "ec2example.com"
           remote-path: "~/deploy/"
           ssh-key: "${{ secrets.SSH_KEY }}"
