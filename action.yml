@@ -27,7 +27,7 @@ runs:
         ls -al $GITHUB_ACTION_PATH/
         cd $GITHUB_ACTION_PATH/
         chmod +x ./script.sh
-        ./script.sh "${{ inputs.remote-user }}" "${{ inputs.remote-host }}" "${{ inputs.remote-path }}" "${{ inputs.ssh-key }}"
+        ./script.sh "${{ inputs.remote-user }}" "${{ inputs.remote-host }}" "${{ inputs.remote-path }}" "${{ inputs.ssh-key }}" "$GITHUB_WORKSPACE"
 
 branding:
   icon: "chevrons-right"  # Sets the icon for the Action
