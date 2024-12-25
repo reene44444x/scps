@@ -2,7 +2,7 @@
 
 This GitHub Action automatically transfers files listed in a `.scps` file in your project to a remote server using SCP.
 
-Create .scps file in the root of the project, list all relative path of the files which will be transfered to the server.
+Create .scps file in the root of the project, list all relative paths of the files that will be transfered to the server.
 ## Inputs
 
 | Name           | Description                              | Required | 
