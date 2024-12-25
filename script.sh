@@ -32,6 +32,7 @@ FILES=""
 while IFS= read -r FILE; do
   if [[ -f "$WORK_SPACE/$FILE" ]]; then
     FILES="$FILES $WORK_SPACE/$FILE"
+    echo "Info: '$FILE' appended in ''$FILES "
   else
     echo "Warning: '$FILE' listed in $SCPS_FILE does not exist or is not a regular file."
   fi
