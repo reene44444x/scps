@@ -26,9 +26,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2qht0zSRWi5nwTg0WrfsMWjm3sq" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -41,7 +41,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "2d0e290b",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Volumes/SSK_Drive/Github/Scps-transfer",
     "node.js.detected.package.eslint": "true",
@@ -53,19 +53,6 @@
   }
 }]]></component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="scps-transfer" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="scps-transfer" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ScpsTransferApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="scps-transfer" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.remote.scpstransfer.ScpsTransferApplication" />
@@ -83,6 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1735126415847</updated>
       <workItem from="1735126416920" duration="2395000" />
+      <workItem from="1735129559398" duration="841000" />
     </task>
     <servers />
   </component>

@@ -22,6 +22,8 @@ runs:
   steps:
     - shell: bash
       run: |
+        echo "Current working directory: $(pwd)"
+        ls -al
         ./script.sh "${{ inputs.remote-user }}" "${{ inputs.remote-host }}" "${{ inputs.remote-path }}" "${{ inputs.ssh-key }}"
 
 branding:
