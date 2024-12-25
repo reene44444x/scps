@@ -1,4 +1,4 @@
-name: "SCP Command Transfer Files"
+name: "SCP Command For Transfer Files"
 description: "Automatically reads the single .scps file in the project and transfers the listed files to a remote server using SCP."
 author: "Reene444"
 inputs:
@@ -23,3 +23,7 @@ runs:
     - shell: bash
       run: |
         ./script.sh "${{ inputs.remote-user }}" "${{ inputs.remote-host }}" "${{ inputs.remote-path }}" "${{ inputs.ssh-key }}"
+
+branding:
+  icon: "chevrons-right"  # Sets the icon for the Action
+  color: "green"         # Sets the color for the Action
