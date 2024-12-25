@@ -1,0 +1,25 @@
+name: "SCP Transfer Files"
+description: "Automatically reads the single .scps file in the project and transfers the listed files to a remote server using SCP."
+author: "Reene444"
+inputs:
+  remote-user:
+    description: "Username for the remote server."
+    required: true
+  remote-host:
+    description: "Remote server address (e.g., ec2-12-34-56-78.compute.amazonaws.com)."
+    required: true
+  remote-path:
+    description: "Destination path on the remote server (e.g., ~/deploy/)."
+    required: true
+  ssh-key:
+    description: "SSH private key for authentication."
+    required: true
+outputs:
+  transfer-status:
+    description: "Status of the SCP transfer operation."
+runs:
+  using: "composite"
+  steps:
+    - shell: bash
+      run: |
+        ./script.sh "${{ inputs.remote-user }}" "${{ inputs.remote-host }}" "${{ inputs.remote-path }}" "${{ inputs.ssh-key }}"
