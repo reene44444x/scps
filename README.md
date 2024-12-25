@@ -35,13 +35,19 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
+        
+      - name: Add SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.YOUR_EC2_SSH_KEY }}" > ~/.example-ssh/your-ec2-pri-key.pem
+          chmod 600 ~/.example-ssh/your-ec2-pri-key.pem
+          
       - name: SCP Transfer Files
         uses: reene444/scp-transfer-action@v1.0.0
         with:
           remote-user: "ubuntu"
-          remote-host: "ec2example.com"
+          remote-host: "ec2-example.com"
           remote-path: "~/deploy/"
-          ssh-key-path: "~/examplessh/yourec2key.pem"
+          ssh-key-path: "~/.example-ssh/your-ec2-pri-key.pem"
 ```
 
