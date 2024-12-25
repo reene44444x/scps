@@ -4,7 +4,7 @@
 REMOTE_USER=$1
 REMOTE_HOST=$2
 REMOTE_PATH=$3
-SSH_KEY=$4
+SSH_KEY_PATH=$4
 WORK_SPACE=$5
 # 配置 SSH
 mkdir -p ~/.ssh
@@ -46,7 +46,7 @@ fi
 
 # 执行 SCP 传输
 echo "Transferring files to $REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH"
-scp -o StrictHostKeyChecking=no -i $SSH_KEY $FILES "$REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH"
+scp -o StrictHostKeyChecking=no -i $SSH_KEY_PATH $FILES "$REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH"
 
 # 检查 SCP 是否成功
 if [[ $? -eq 0 ]]; then
