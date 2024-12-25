@@ -1,17 +1,17 @@
 #!/bin/bash
 
-# 获取输入参数
+# Get input parameters
 REMOTE_USER=$1
 REMOTE_HOST=$2
 REMOTE_PATH=$3
 SSH_KEY_PATH=$4
 WORK_SPACE=$5
-# 配置 SSH
+# Configure SSH
 mkdir -p ~/.ssh
 echo "$SSH_KEY" > ~/.ssh/id_rsa
 chmod 600 ~/.ssh/id_rsa
 
-# 查找项目根目录下唯一的 .scps 文件
+#Find the only .scps file in the project root directory
 SCPS_FILE=$(find $WORK_SPACE -maxdepth 1 -type f -name "*.scps")
 if [[ -z "$SCPS_FILE" ]]; then
   echo "Error: No .scps file found in the project root."
@@ -25,10 +25,10 @@ if [[ $(echo "$SCPS_FILE" | wc -l) -ne 1 ]]; then
   exit 1
 fi
 
-# 初始化拼接的文件路径变量
+# Initialize the concatenated file path variable
 FILES=""
 
-# 逐行读取 .scps 文件
+# Reading .scps files line by line
 while IFS= read -r FILE; do
   if [[ -f "$WORK_SPACE/$FILE" ]]; then
     FILES="$FILES $WORK_SPACE/$FILE"
@@ -37,18 +37,18 @@ while IFS= read -r FILE; do
   fi
 done < "$SCPS_FILE"
 
-# 检查是否有有效文件
+# Check if there is a valid file
 if [[ -z "$FILES" ]]; then
   echo "No valid files found to transfer."
   echo "::set-output name=transfer-status::Error: No valid files."
   exit 1
 fi
 
-# 执行 SCP 传输
+#Performing an SCP transfer
 echo "Transferring files to $REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH"
 scp -o StrictHostKeyChecking=no -i $SSH_KEY_PATH $FILES "$REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH"
 
-# 检查 SCP 是否成功
+# Check if SCP was successful
 if [[ $? -eq 0 ]]; then
   echo "Files transferred successfully."
   echo "::set-output name=transfer-status::Success"
