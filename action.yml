@@ -1,4 +1,4 @@
-name: "SCP Transfer Files"
+name: "SCP Command Transfer Files"
 description: "Automatically reads the single .scps file in the project and transfers the listed files to a remote server using SCP."
 author: "Reene444"
 inputs:
