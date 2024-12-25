@@ -23,6 +23,7 @@ runs:
     - shell: bash
       run: |
         echo "Current working directory: $(pwd)"
+        echo "Changing directory to Action directory"
         cd $GITHUB_WORKSPACE/_actions/Reene444/scps-transfer/v1.0.0
         ls -al
         ./script.sh "${{ inputs.remote-user }}" "${{ inputs.remote-host }}" "${{ inputs.remote-path }}" "${{ inputs.ssh-key }}"
