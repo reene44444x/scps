@@ -23,7 +23,7 @@ runs:
     - shell: bash
       run: |
         echo "Current working directory: $(pwd)"
-        ls -al
+        ls -al /home/runner/work
         echo "Changing directory to Action directory"
         cd $Home
         cd ~
