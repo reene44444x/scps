@@ -11,6 +11,7 @@ This GitHub Action automatically transfers files listed in a `.scps` file in you
 | `remote-path` | Destination path on the remote server.        | Yes      |         |
 | `ssh-key`     | SSH private key for authentication.           | Yes      |         |
 
+
 ## Outputs
 
 | Name              | Description                       |
