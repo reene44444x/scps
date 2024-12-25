@@ -4,12 +4,12 @@ This GitHub Action automatically transfers files listed in a `.scps` file in you
 
 ## Inputs
 
-| Name           | Description                              | Required | Default |
-|----------------|------------------------------------------|----------|---------|
-| `remote-user`  | Username for the remote server.          | Yes      |         |
-| `remote-host`  | Remote server address.                   | Yes      |         |
-| `remote-path`  | Destination path on the remote server.   | Yes      |         |
-| `ssh-key-path` | SSH private key path for authentication. | Yes      |         |
+| Name           | Description                              | Required | 
+|----------------|------------------------------------------|----------|
+| `remote-user`  | Username for the remote server.          | Yes      | 
+| `remote-host`  | Remote server address.                   | Yes      |   
+| `remote-path`  | Destination path on the remote server.   | Yes      |     
+| `ssh-key-path` | SSH private key path for authentication. | Yes      |  
 
 
 ## Outputs
