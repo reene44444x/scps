@@ -30,7 +30,7 @@ FILES=""
 
 # 逐行读取 .scps 文件
 while IFS= read -r FILE; do
-  if [[ -f "$FILE" ]]; then
+  if [[ -f "$WORK_SPACE/$FILE" ]]; then
     FILES="$FILES $WORK_SPACE/$FILE"
   else
     echo "Warning: '$FILE' listed in $SCPS_FILE does not exist or is not a regular file."
