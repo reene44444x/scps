@@ -5,14 +5,14 @@ REMOTE_USER=$1
 REMOTE_HOST=$2
 REMOTE_PATH=$3
 SSH_KEY=$4
-WORK_SPACE/=$5
+WORK_SPACE=$5
 # 配置 SSH
 mkdir -p ~/.ssh
 echo "$SSH_KEY" > ~/.ssh/id_rsa
 chmod 600 ~/.ssh/id_rsa
 
 # 查找项目根目录下唯一的 .scps 文件
-SCPS_FILE=$(find $WORK_SPACE/ -maxdepth 1 -type f -name "*.scps")
+SCPS_FILE=$(find $WORK_SPACE -maxdepth 1 -type f -name "*.scps")
 if [[ -z "$SCPS_FILE" ]]; then
   echo "Error: No .scps file found in the project root."
   echo "::set-output name=transfer-status::Error: No .scps file found."
