@@ -46,7 +46,7 @@ fi
 
 # 执行 SCP 传输
 echo "Transferring files to $REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH"
-scp -o StrictHostKeyChecking=no $FILES "$REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH"
+scp -o StrictHostKeyChecking=no -i $SSH_KEY $FILES "$REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH"
 
 # 检查 SCP 是否成功
 if [[ $? -eq 0 ]]; then
