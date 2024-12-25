@@ -24,7 +24,7 @@ runs:
       run: |
         echo "Current working directory: $(pwd)"
         echo "Changing directory to Action directory"
-        ls -al GITHUB_ACTION_PATH
+        ls -al $GITHUB_ACTION_PATH/
         cd /home/runner/work/_actions/Reene444/scps-transfer/v1.0.0
         ./script.sh "${{ inputs.remote-user }}" "${{ inputs.remote-host }}" "${{ inputs.remote-path }}" "${{ inputs.ssh-key }}"
 
