@@ -13,6 +13,10 @@ Create .scps file in the root of the project, list all relative paths of the fil
 | `ssh-key-path` | SSH private key path for authentication. | Yes      |  
 
 
+
+
+
+
 ## Outputs
 
 | Name              | Description                       |
